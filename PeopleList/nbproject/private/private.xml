@@ -5,5 +5,9 @@
         <group name="Indus2">
             <file>file:/C:/Users/steven.habegger/Documents/HEG_pratique/ODI_2/Serie4/PeopleList/web/index.xhtml</file>
         </group>
+        <group name="ODI_2">
+            <file>file:/C:/Users/steven.habegger/Documents/HEG_pratique/ODI_2/Serie4/PeopleList/web/index.xhtml</file>
+            <file>file:/C:/Users/steven.habegger/Documents/HEG_pratique/ODI_2/Serie4/PeopleList/src/java/ch/hearc/ig/odi2/peoplelist/presentation/bundle/fr_CH.properties</file>
+        </group>
     </open-files>
 </project-private>

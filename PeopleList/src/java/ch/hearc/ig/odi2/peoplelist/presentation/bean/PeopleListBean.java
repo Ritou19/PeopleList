@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hearc.ig.odi2.peoplelist.presentation;
+package ch.hearc.ig.odi2.peoplelist.presentation.bean;
 
 import ch.hearc.ig.odi2.peoplelist.service.Services;
 import java.util.List;
@@ -15,13 +15,13 @@ import javax.inject.Inject;
  *
  * @author steven.habegger
  */
-@Named(value = "peopleLisBean")
+@Named(value = "peopleListBean")
 @RequestScoped
-public class PeopleLisBean {
+public class PeopleListBean {
     
     @Inject Services services;
 
-    public PeopleLisBean() {
+    public PeopleListBean() {
     }
     
     public List getPeopleList() {
