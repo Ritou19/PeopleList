@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title><h:outputText value="#{msg.addPerson}"</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h2><h:outputText value="#{msg.addPerson}"</h2>
+
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="#{msg.id} : " for="id" />
+                <h:inputText id="id" required="true" requiredMessage="#{msg.idRequired}" value="#{createPersonBean.id}" />
+                <h:outputLabel value="#{msg.gender} : " for="sexe" />
+                <h:inputText id="sexe" required="true" requiredMessage="#{msg.genderRequired}" value="#{createPersonBean.lastName}" />
+                <h:outputLabel value="#{msg.firstName} : " for="prenom" />
+                <h:inputText id="prenom" required="true" requiredMessage="#{msg.fnRequired}" value="#{createPersonBean.firstName }" />
+                <h:outputLabel value="#{msg.lastName} : " for="nom" />
+                <h:inputText id="nom" required="true" requiredMessage="#{msg.lnRequired}" value="#{createPersonBean.firstName }" />
+                <h:outputLabel value="#{msg.married} : " for="marrie" />
+                <h:inputText id="marrie" required="true" requiredMessage="#{msg.marriedRequired}" value="#{createPersonBean.firstName }" />
+                <h:outputLabel value="#{msg.birthDate} : " for="dateNaiss" />
+                <h:inputText id="dateNaiss" required="true" requiredMessage="#{msg.bdRequired}" value="#{createPersonBean.firstName }" />
+            </h:panelGrid>
+            <h:commandButton type="reset" value="#{msg.reinit}" />
+            <h:commandButton action="#{createPersonBean.addPerson()}" value="#{msg.valider}" />
+        </h:form>
+        
+    </body>
+</html>
