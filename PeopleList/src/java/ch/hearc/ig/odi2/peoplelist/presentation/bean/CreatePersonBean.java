@@ -1,27 +1,46 @@
-package ch.hearc.ig.odi2.peoplelist.business;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ch.hearc.ig.odi2.peoplelist.presentation.bean;
 
+import ch.hearc.ig.odi2.peoplelist.service.Services;
 import java.util.Date;
+import javax.inject.Named;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 /**
- *
+ * Bean de la page de la creation personne
+ * 
  * @author steven.habegger
+ * @version 1.0, 31.10.2016
  */
-public class Person {
-    private Long id;
+@Named(value = "createPersonBean")
+@RequestScoped
+public class CreatePersonBean {
+
+    @Inject Services services;
+    private long id;
     private String gender;
     private String firstName;
     private String lastName;
     private Boolean married;
     private Date birthDate;
-
-    public Person() {
+    
+    /**
+     * Constructeur par defaut du bean
+     */
+    public CreatePersonBean() {
     }
 
-    public Long getId() {
+    
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -63,6 +82,12 @@ public class Person {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+    
+    
+    public String addPerson() {
+        services.savePerson(this.gender, this.firstName, this.lastName, this.married, this.birthDate);
+        return "index.xhtml";
     }
     
     

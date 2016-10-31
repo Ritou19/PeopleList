@@ -15,4 +15,13 @@
             <var>msg</var>
         </resource-bundle>
     </application>
+<!--    
+    <navigation-rule>
+        <from-view-id>/addPerson.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>annuler</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    -->
 </faces-config>

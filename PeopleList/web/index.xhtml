@@ -49,9 +49,15 @@
                 <f:facet name="header">
                     <h:outputText value="#{msg.birthDate}" />
                 </f:facet>
-                <h:outputText value="#{person.birthDate}" />
+                <h:outputText value="#{person.birthDate}">
+                    <f:convertDateTime pattern="dd.MM.yyyy" />
+                </h:outputText>
             </h:column>
         </h:dataTable>
+        
+        <h:form>
+            <h:commandButton action="addPerson.xhtml" value="#{msg.btnAddPerson}" />
+        </h:form>
 
     </h:body>
 </html>
