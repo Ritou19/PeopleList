@@ -23,11 +23,9 @@
                 <h:outputLabel value="#{msg.married} : " for="marrie" />
                 <h:inputText id="marrie" required="true" requiredMessage="#{msg.marriedRequired}" value="#{createPersonBean.married}" />
                 <h:outputLabel value="#{msg.birthDate} : " for="dateNaiss" />
-                <h:inputText id="dateNaiss" required="true" value="#{createPersonBean.birthDate}">
+                <h:inputText id="dateNaiss" required="true" requiredMessage="#{msg.bdRequired}" value="#{createPersonBean.birthDate}">
                     <f:convertDateTime pattern="dd.MM.yyyy" />
                 </h:inputText>
-                
-                <!--requiredMessage="{msg.bdRequired}" -->
             </h:panelGrid>
             <h:commandButton type="reset" value="#{msg.btnReset}" />
             <h:commandButton action="#{createPersonBean.addPerson()}" value="#{msg.btnValidate}" />
