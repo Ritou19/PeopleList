@@ -65,6 +65,9 @@ public class Person {
         this.birthDate = birthDate;
     }
     
-    
+    @Override
+    public String toString() {
+        return this.firstName + " " + this.lastName;
+    }
     
 }
